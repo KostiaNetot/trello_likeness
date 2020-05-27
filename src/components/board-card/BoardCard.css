@@ -1,0 +1,43 @@
+.board-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 5px;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  position: relative;
+}
+
+.board-card h4 {
+  margin-bottom: 6px;
+}
+
+.board-card__text {
+  padding: 8px 0;
+}
+
+.board-card .label {
+  color: #FFFFFF;
+  padding: 4px;
+  font-size: 0.8em;
+  border-radius: 2px;
+}
+
+.board-card .settings-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  transition: transform .3s;
+}
+
+.board-card .settings-icon:hover {
+  transform: rotate(20deg);
+}
+
+.board-card .status {
+  padding: 8px 0;
+  color: darkslategrey;
+}

@@ -1,0 +1,97 @@
+.modal-form-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-form-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  border-radius: 4px;
+  padding: 12px;
+  background-color: #FFFFFF;
+}
+
+.modal-form-inner .close-button {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 16px;
+  height: 16px;
+  top: 12px;
+  right: 12px;
+  transform: rotate(45deg);
+  transition: transform .2s;
+  cursor: pointer;
+}
+
+.modal-form-inner .close-button:hover {
+  transform: rotate(55deg);
+}
+
+.modal-form-inner .close-button::before {
+  width: 16px;
+  height: 2px;
+  position: absolute;
+  display: block;
+  content: '';
+  background-color: black;
+  top: 7px;
+}
+
+.modal-form-inner .close-button::after {
+  width: 2px;
+  height: 16px;
+  position: absolute;
+  display: block;
+  content: '';
+  background-color: black;
+  left: 7px;
+}
+
+.modal-form-inner h4 {
+  margin-bottom: 6px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form > * {
+  margin-bottom: 6px;
+  border-style: none;
+  outline: none;
+  padding: 4px;
+  color: #000000;
+  border: 1px solid #C4C4C4;
+  border-radius: 4px;
+}
+
+form > *:hover {
+  border-color: #000000;
+}
+
+form > *:focus {
+  border-color: steelblue;
+}
+
+form textarea {
+  resize: none
+}
+
+form button {
+  color: #FFFFFF;
+  background-color: steelblue;
+  padding: 6px 8px;
+  margin-top: 8px;
+  align-self: center;
+  cursor: pointer;
+  border-radius: 2px;
+  outline: none;
+}

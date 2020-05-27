@@ -1,24 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from "react-redux";
 import './App.css';
 
+import BoardColumn from "./components/board-column/BoardColumn";
+import ModalForm from "./components/modal-form/ModalForm";
+
 function App() {
+  const dispatch = useDispatch();
+  const columns = useSelector(state => state.columns);
+  const modalForm = useSelector(state => state.modalForm.showing);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container">
+        <div className="row">
+          { columns.map(column => (
+            <BoardColumn
+              title={column.title}
+              cards={column.cards}
+              key={column.id}
+              bgColor={column.bgColor}
+              icon={column.icon}
+            />
+          )) }
+        </div>
+        { modalForm ? <ModalForm/> : null }
+      </div>
     </div>
   );
 }

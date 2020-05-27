@@ -1,0 +1,41 @@
+.add-task-button {
+  display: flex;
+  justify-content: center;
+}
+
+.add-task-button span {
+  width: 16px;
+  height: 16px;
+  margin-bottom: 5px;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  transition: transform .2s;
+}
+
+.add-task-button span::before {
+  position: absolute;
+  width: 8px;
+  height: 2px;
+  display: block;
+  content: '';
+  background-color: #52ADF8;
+  top: 7px;
+  left: 4px;
+}
+
+.add-task-button span::after {
+  position: absolute;
+  width: 2px;
+  height: 8px;
+  display: block;
+  content: '';
+  background-color: #52ADF8;
+  top: 4px;
+  left: 7px;
+}
+
+.add-task-button span:hover {
+  transform: scale(1.1);
+}

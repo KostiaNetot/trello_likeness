@@ -1,0 +1,25 @@
+.column-container {
+  padding: 5px;
+  width: 200px;
+  position: relative;
+}
+
+.column-container .header-icon {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 12px;
+  left: 5px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.column-container h3 {
+  padding-left: 24px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+}
+
